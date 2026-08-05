@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initPageTransitions();
+  initScrollReveal();
   initHeader();
   initSlidingHeaderPill();
   initServicesDropdown();
@@ -16,6 +17,55 @@ document.addEventListener('DOMContentLoaded', () => {
   initSampleProjectModal();
   initContactForm();
 });
+
+/* High-End Universal Scroll Reveal & Slide-Fade Animations */
+function initScrollReveal() {
+  const targetSelectors = [
+    '.section-header',
+    '.service-card',
+    '.solution-card',
+    '.project-card',
+    '.pricing-card',
+    '.process-step-card',
+    '.faq-item',
+    '.contact-form-box',
+    '.hero-main-title',
+    '.hero-checkmarks-row',
+    '.hero-cta-buttons',
+    '.phone-mockup-container',
+    '.right-floating-card',
+    '.footer-col',
+    '.reveal-on-scroll'
+  ];
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  const allTargets = document.querySelectorAll(targetSelectors.join(', '));
+  allTargets.forEach((el) => {
+    if (!el.classList.contains('reveal-on-scroll')) {
+      el.classList.add('reveal-on-scroll');
+    }
+    
+    const parentGrid = el.parentElement;
+    if (parentGrid && (parentGrid.classList.contains('services-grid') || parentGrid.classList.contains('solutions-grid') || parentGrid.classList.contains('projects-grid') || parentGrid.classList.contains('pricing-grid-3') || parentGrid.classList.contains('footer-grid'))) {
+      const index = Array.from(parentGrid.children).indexOf(el);
+      if (index >= 0) {
+        el.classList.add(`stagger-${(index % 5) + 1}`);
+      }
+    }
+
+    observer.observe(el);
+  });
+}
 
 /* Smooth SPA-Style Page Slide Transitions */
 function initPageTransitions() {
