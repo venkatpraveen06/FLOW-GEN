@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
 });
 
-/* Strict One-By-One Sequential Chain Wipe-Down Animation System */
+/* Apply Wipe-Down Animation to ALL Elements Across Desktop & Mobile */
 function initWipedownAnimation() {
-  const sections = document.querySelectorAll('section, footer, header');
+  const sections = document.querySelectorAll('section, footer, header, main, .page-hero-banner');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -29,19 +29,34 @@ function initWipedownAnimation() {
       }
     });
   }, {
-    threshold: 0.08,
-    rootMargin: '0px 0px -30px 0px'
+    threshold: 0.01,
+    rootMargin: '100px 0px 50px 0px'
   });
 
   sections.forEach(section => {
-    const items = section.querySelectorAll('.section-tag, .section-title, .section-subtitle, .service-card, .solution-card, .project-card, .pricing-card, .process-step-card, .faq-item, .contact-form-box, .hero-main-title, .hero-checkmarks-row, .hero-cta-buttons, .phone-mockup-container, .right-floating-card, .footer-col');
+    const items = section.querySelectorAll('h1, h2, h3, h4, h5, h6, p, .section-tag, .meta-partner-badge, .hero-checkmarks-row, .hero-cta-buttons, .phone-mockup-container, .right-floating-card, .left-app-icons, .service-card, .solution-card, .project-card, .pricing-card, .process-step-card, .faq-item, .contact-form-box, .comparison-table, .footer-col, .mega-card, .benefit-tag');
 
     items.forEach((item, index) => {
+      if (item.closest('.navbar-wrapper') || item.closest('.navbar-pill')) return;
+
       item.classList.add('wipedown-reveal');
       item.classList.add(`stagger-${(index % 6) + 1}`);
       observer.observe(item);
     });
   });
+
+  // Fallback trigger for items inside the initial visible window
+  const checkInitialVisibility = () => {
+    document.querySelectorAll('.wipedown-reveal').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 100 && rect.bottom > 0) {
+        el.classList.add('is-visible');
+      }
+    });
+  };
+
+  requestAnimationFrame(checkInitialVisibility);
+  setTimeout(checkInitialVisibility, 150);
 }
 
 /* Smooth SPA-Style Page Slide Transitions */
