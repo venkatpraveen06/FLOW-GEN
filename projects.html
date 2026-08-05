@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery Showcase — Flowgen Digital Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .gallery-img-container {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      background: #f1f5f9;
+      position: relative;
+    }
+    .gallery-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.4s ease;
+    }
+    .project-card:hover .gallery-img-container img {
+      transform: scale(1.04);
+    }
+    .lightbox-img {
+      width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+      border: 1px solid var(--border-subtle);
+    }
+  </style>
+</head>
+<body>
+
+    <!-- Floating Pill Navbar -->
+  <div class="navbar-wrapper">
+    <nav class="navbar-pill">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="Flowgen Logo" class="logo-icon-img">
+        <span>Flowgen</span>
+      </a>
+
+      <div class="nav-links">
+        <!-- Services with Glossy Mega Menu -->
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">Services <i class="fa-solid fa-chevron-down" style="font-size:0.65rem;"></i></a>
+          <div class="mega-menu">
+            <div class="mega-title">Our Services</div>
+            <div class="mega-grid-3">
+              <a href="services.html" class="mega-card">
+                <div class="mega-icon"><i class="fa-solid fa-desktop"></i></div>
+                <div class="mega-info"><h6>Business Websites</h6><p>Professional responsive business websites</p></div>
+              </a>
+              <a href="services.html" class="mega-card">
+                <div class="mega-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="mega-info"><h6>AI Automation</h6><p>Automate repetitive business tasks</p></div>
+              </a>
+              <a href="services.html" class="mega-card">
+                <div class="mega-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="mega-info"><h6>WhatsApp Automation</h6><p>Customer engagement automation</p></div>
+              </a>
+              <a href="services.html" class="mega-card">
+                <div class="mega-icon"><i class="fa-solid fa-code"></i></div>
+                <div class="mega-info"><h6>Custom Software</h6><p>Business management systems</p></div>
+              </a>
+              <a href="services.html" class="mega-card">
+                <div class="mega-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="mega-info"><h6>UI/UX Design</h6><p>Modern interface design</p></div>
+              </a>
+              <a href="services.html" class="mega-card">
+                <div class="mega-icon"><i class="fa-solid fa-plug"></i></div>
+                <div class="mega-info"><h6>API Integration</h6><p>Third-party software integrations</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></div>
+        <div class="nav-item"><a href="projects.html" class="nav-link">Gallery</a></div>
+        <div class="nav-item"><a href="solutions.html" class="nav-link">Why us</a></div>
+        <div class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></div>
+      </div>
+
+      <div class="nav-right-actions">
+        <a href="contact.html" class="btn-black-pill">Book a demo</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero-banner">
+    <div class="container">
+      <span class="section-tag">PORTFOLIO GALLERY</span>
+      <h1>Featured Work & UI Concept Showcase</h1>
+      <p>Explore high-converting business websites, interactive web applications, and WhatsApp flow blueprints engineered by Flowgen.</p>
+    </div>
+  </section>
+
+  <!-- Featured Work Hero Banner -->
+  <section style="padding:40px 0; background:#ffffff; border-bottom:1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="background:#f8fafc; border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:24px; box-shadow:var(--shadow-card);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+          <div>
+            <span class="section-tag" style="background:#eff6ff;"><i class="fa-solid fa-star" style="color:#2563eb;"></i> FEATURED ARCHITECTURE</span>
+            <h2 style="font-size:1.6rem; font-weight:800; color:var(--text-dark); margin-top:6px;">WhatsApp Automation Flow Ecosystem</h2>
+          </div>
+          <span class="sample-badge">DEMO PROJECT</span>
+        </div>
+        
+        <div style="border-radius:14px; overflow:hidden; border:1px solid var(--border-subtle); background:#ffffff;">
+          <img src="assets/gallery/gallery_4_featured.png" alt="Featured Work Showcase" style="width:100%; height:auto; display:block;">
+        </div>
+        <div class="sample-disclaimer" style="margin-top:16px;">This project gallery is created only to demonstrate Flowgen's capabilities.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Business Website UI Showcase (Uploaded User Images) -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Web Applications</span>
+        <h2 class="section-title">Business Website UI Concepts</h2>
+        <p class="section-subtitle">Custom web design blueprints built with responsive layouts and interactive features.</p>
+      </div>
+
+      <div class="projects-grid" style="grid-template-columns: repeat(3, 1fr); gap:28px;">
+        
+        <!-- Card 1: Restaurant Website -->
+        <div class="project-card">
+          <div class="gallery-img-container">
+            <img src="assets/gallery/restaurant_ui.jpg" alt="Restaurant Website Showcase">
+            <span class="sample-badge" style="position:absolute; top:12px; right:12px; z-index:3;">DEMO PROJECT</span>
+          </div>
+          <div class="project-content" style="margin-top:18px;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <span style="font-size:0.75rem; font-weight:800; color:#2563eb; letter-spacing:0.04em;">RESTAURANT CONCEPT</span>
+                <span class="sample-badge">DEMO PROJECT</span>
+              </div>
+              <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:6px;">Restaurant Website Showcase</h3>
+              <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.5;">
+                Blanquette fine dining menu layout, online table reservation, and WhatsApp ordering flow.
+              </p>
+            </div>
+            <div>
+              <div class="sample-disclaimer">This project is created only to demonstrate Flowgen's capabilities.</div>
+              <button class="btn-black-pill open-gallery-modal" data-img="assets/gallery/restaurant_ui.jpg" data-title="Restaurant Website Showcase" data-desc="Blanquette fine dining menu layout, online table reservation, and WhatsApp ordering flow." style="width:100%; margin-top:14px;">
+                Inspect UI Design <i class="fa-solid fa-expand" style="margin-left:6px;"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Clinic Website -->
+        <div class="project-card">
+          <div class="gallery-img-container">
+            <img src="assets/gallery/clinic_ui.jpg" alt="Clinic Website Showcase">
+            <span class="sample-badge" style="position:absolute; top:12px; right:12px; z-index:3;">DEMO PROJECT</span>
+          </div>
+          <div class="project-content" style="margin-top:18px;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <span style="font-size:0.75rem; font-weight:800; color:#2563eb; letter-spacing:0.04em;">CLINIC CONCEPT</span>
+                <span class="sample-badge">DEMO PROJECT</span>
+              </div>
+              <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:6px;">Clinic Website & Appointment System</h3>
+              <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.5;">
+                CarePoint doctor booking portal, online appointment calendar, and patient consultation dashboard.
+              </p>
+            </div>
+            <div>
+              <div class="sample-disclaimer">This project is created only to demonstrate Flowgen's capabilities.</div>
+              <button class="btn-black-pill open-gallery-modal" data-img="assets/gallery/clinic_ui.jpg" data-title="Clinic Website & Appointment System" data-desc="CarePoint doctor booking portal, online appointment calendar, and patient consultation dashboard." style="width:100%; margin-top:14px;">
+                Inspect UI Design <i class="fa-solid fa-expand" style="margin-left:6px;"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Gym Website -->
+        <div class="project-card">
+          <div class="gallery-img-container">
+            <img src="assets/gallery/gym_ui.jpg" alt="Gym Website Showcase">
+            <span class="sample-badge" style="position:absolute; top:12px; right:12px; z-index:3;">DEMO PROJECT</span>
+          </div>
+          <div class="project-content" style="margin-top:18px;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <span style="font-size:0.75rem; font-weight:800; color:#2563eb; letter-spacing:0.04em;">GYM CONCEPT</span>
+                <span class="sample-badge">DEMO PROJECT</span>
+              </div>
+              <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:6px;">Gym Website & Interactive BMI Tool</h3>
+              <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.5;">
+                Hadkaur Fitness portal, workout schedules, membership plans, and interactive fitness tools.
+              </p>
+            </div>
+            <div>
+              <div class="sample-disclaimer">This project is created only to demonstrate Flowgen's capabilities.</div>
+              <button class="btn-black-pill open-gallery-modal" data-img="assets/gallery/gym_ui.jpg" data-title="Gym Website & Interactive BMI Tool" data-desc="Hadkaur Fitness portal, workout schedules, membership plans, and interactive fitness tools." style="width:100%; margin-top:14px;">
+                Inspect UI Design <i class="fa-solid fa-expand" style="margin-left:6px;"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: WhatsApp Flow Screenshots -->
+  <section class="section-padding" style="background:#ffffff; border-top:1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">WhatsApp Flows</span>
+        <h2 class="section-title">Automated Messaging Screen Flows</h2>
+        <p class="section-subtitle">Multi-screen WhatsApp interactive flow experiences engineered for lead conversion.</p>
+      </div>
+
+      <div class="projects-grid" style="grid-template-columns: repeat(3, 1fr); gap:28px;">
+        
+        <!-- Pic 1: Product Selection & Ordering Flow -->
+        <div class="project-card">
+          <div class="gallery-img-container">
+            <img src="assets/gallery/gallery_2_ecommerce.png" alt="Product selection & ordering">
+            <span class="sample-badge" style="position:absolute; top:12px; right:12px; z-index:3;">DEMO PROJECT</span>
+          </div>
+          <div class="project-content" style="margin-top:18px;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <span style="font-size:0.75rem; font-weight:800; color:#2563eb; letter-spacing:0.04em;">E-COMMERCE FLOW</span>
+                <span class="sample-badge">DEMO PROJECT</span>
+              </div>
+              <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:6px;">Product selection & ordering</h3>
+              <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.5;">
+                A seamless flow where customers can browse catalogs, select products, and complete checkout all within WhatsApp.
+              </p>
+            </div>
+            <div>
+              <div class="sample-disclaimer">This project is created only to demonstrate Flowgen's capabilities.</div>
+              <button class="btn-black-pill open-gallery-modal" data-img="assets/gallery/gallery_2_ecommerce.png" data-title="Product selection & ordering" data-desc="A seamless flow where customers can browse catalogs, select products, and complete checkout all within WhatsApp." style="width:100%; margin-top:14px;">
+                Inspect Flow Screens <i class="fa-solid fa-expand" style="margin-left:6px;"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pic 2: Lead Generation Form -->
+        <div class="project-card">
+          <div class="gallery-img-container">
+            <img src="assets/gallery/gallery_3_insurance.png" alt="Lead generation form">
+            <span class="sample-badge" style="position:absolute; top:12px; right:12px; z-index:3;">DEMO PROJECT</span>
+          </div>
+          <div class="project-content" style="margin-top:18px;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <span style="font-size:0.75rem; font-weight:800; color:#2563eb; letter-spacing:0.04em;">LEAD GENERATION</span>
+                <span class="sample-badge">DEMO PROJECT</span>
+              </div>
+              <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:6px;">Lead generation form</h3>
+              <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.5;">
+                Multi-step interactive lead generation form allowing users to select coverage options, enter personal details, and submit quotes directly inside WhatsApp.
+              </p>
+            </div>
+            <div>
+              <div class="sample-disclaimer">This project is created only to demonstrate Flowgen's capabilities.</div>
+              <button class="btn-black-pill open-gallery-modal" data-img="assets/gallery/gallery_3_insurance.png" data-title="Lead generation form" data-desc="Multi-step interactive lead generation form allowing users to select coverage options, enter personal details, and submit quotes directly inside WhatsApp." style="width:100%; margin-top:14px;">
+                Inspect Flow Screens <i class="fa-solid fa-expand" style="margin-left:6px;"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pic 3: Pre-Approved Loan Disburse Flow -->
+        <div class="project-card">
+          <div class="gallery-img-container">
+            <img src="assets/gallery/gallery_1_loan.png" alt="Pre-Approved Loan Disburse Flow">
+            <span class="sample-badge" style="position:absolute; top:12px; right:12px; z-index:3;">DEMO PROJECT</span>
+          </div>
+          <div class="project-content" style="margin-top:18px;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <span style="font-size:0.75rem; font-weight:800; color:#2563eb; letter-spacing:0.04em;">FINANCE & BANKING</span>
+                <span class="sample-badge">DEMO PROJECT</span>
+              </div>
+              <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:6px;">Pre-Approved Loan Disburse Flow</h3>
+              <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.5;">
+                Loan credit details, tenure selection, UPI / bank details entry, and instant disburse confirmation flow.
+              </p>
+            </div>
+            <div>
+              <div class="sample-disclaimer">This project is created only to demonstrate Flowgen's capabilities.</div>
+              <button class="btn-black-pill open-gallery-modal" data-img="assets/gallery/gallery_1_loan.png" data-title="Pre-Approved Loan Disburse Flow" data-desc="Loan credit details, tenure selection, UPI / bank details entry, and instant disburse confirmation flow." style="width:100%; margin-top:14px;">
+                Inspect Flow Screens <i class="fa-solid fa-expand" style="margin-left:6px;"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="gallery-lightbox" class="modal-overlay">
+    <div class="modal-content" style="max-width:850px;">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <span class="sample-badge" style="margin-bottom:12px;">DEMO PROJECT</span>
+      <h3 id="lightbox-title" style="font-size:1.4rem; font-weight:800; margin-bottom:8px;">Flow Title</h3>
+      <p id="lightbox-desc" style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">Flow description...</p>
+      
+      <img id="lightbox-img-el" src="" alt="Flow Screen Preview" class="lightbox-img">
+
+      <div class="sample-disclaimer">This project is created only to demonstrate Flowgen's capabilities.</div>
+    </div>
+  </div>
+
+  <!-- Multi-Column Footer -->
+    <!-- Multi-Column Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & Description -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="logo" style="margin-bottom:14px; display:inline-flex;">
+            <svg class="logo-icon-svg" viewBox="0 0 40 40" fill="none">
+              <path d="M10 28 C10 16, 20 8, 28 12 C34 15, 34 25, 26 28 C20 30, 14 20, 20 12" stroke="url(#logo-grad-foot-gen)" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <defs>
+                <linearGradient id="logo-grad-foot-gen" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2563eb" />
+                  <stop offset="50%" stop-color="#0284c7" />
+                  <stop offset="100%" stop-color="#25d366" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <span style="color:#fff;">FLOWGEN</span>
+          </a>
+          <p class="footer-brand-desc">
+            Building premium digital experiences through websites, AI automation, WhatsApp automation, and custom software development.
+          </p>
+        </div>
+
+        <!-- Column 2: Services -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Business Websites</a></li>
+            <li><a href="services.html">AI Automation</a></li>
+            <li><a href="services.html">WhatsApp Automation</a></li>
+            <li><a href="services.html">Custom Software</a></li>
+            <li><a href="services.html">UI/UX Design</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Solutions -->
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="solutions.html">Restaurants</a></li>
+            <li><a href="solutions.html">Healthcare</a></li>
+            <li><a href="solutions.html">Retail</a></li>
+            <li><a href="solutions.html">Education</a></li>
+            <li><a href="solutions.html">Hospitality</a></li>
+            <li><a href="solutions.html">Real Estate</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Company -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="technologies.html">Technologies</a></li>
+            <li><a href="projects.html">Sample Projects</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 5: Legal -->
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Flowgen. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lightbox = document.getElementById('gallery-lightbox');
+      const lightboxImg = document.getElementById('lightbox-img-el');
+      const lightboxTitle = document.getElementById('lightbox-title');
+      const lightboxDesc = document.getElementById('lightbox-desc');
+      const closeBtn = lightbox.querySelector('.modal-close');
+
+      document.querySelectorAll('.open-gallery-modal').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const img = btn.getAttribute('data-img');
+          const title = btn.getAttribute('data-title');
+          const desc = btn.getAttribute('data-desc');
+
+          lightboxImg.src = img;
+          lightboxTitle.textContent = title;
+          lightboxDesc.textContent = desc;
+
+          lightbox.classList.add('active');
+        });
+      });
+
+      if (closeBtn) closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) lightbox.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

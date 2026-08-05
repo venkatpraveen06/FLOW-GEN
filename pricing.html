@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plans & Pricing — Flowgen</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Floating Pill Navbar -->
+  <div class="navbar-wrapper">
+    <nav class="navbar-pill">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="Flowgen Logo" class="logo-icon-img">
+        <span>Flowgen</span>
+      </a>
+
+      <div class="nav-links">
+        <!-- Services with Glossy Mega Menu -->
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">Services <i class="fa-solid fa-chevron-down" style="font-size:0.65rem;"></i></a>
+          <div class="mega-menu">
+            <div class="mega-title">Our Services</div>
+            <div class="mega-grid-3">
+              <a href="services.html" class="mega-card">
+                <div class="mega-icon"><i class="fa-solid fa-desktop"></i></div>
+                <div class="mega-info"><h6>Business Websites</h6><p>Professional responsive business websites</p></div>
+              </a>
+              <a href="services.html" class="mega-card">
+                <div class="mega-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="mega-info"><h6>AI Automation</h6><p>Automate repetitive business tasks</p></div>
+              </a>
+              <a href="services.html" class="mega-card">
+                <div class="mega-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="mega-info"><h6>WhatsApp Automation</h6><p>Customer engagement automation</p></div>
+              </a>
+              <a href="services.html" class="mega-card">
+                <div class="mega-icon"><i class="fa-solid fa-code"></i></div>
+                <div class="mega-info"><h6>Custom Software</h6><p>Business management systems</p></div>
+              </a>
+              <a href="services.html" class="mega-card">
+                <div class="mega-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="mega-info"><h6>UI/UX Design</h6><p>Modern interface design</p></div>
+              </a>
+              <a href="services.html" class="mega-card">
+                <div class="mega-icon"><i class="fa-solid fa-plug"></i></div>
+                <div class="mega-info"><h6>API Integration</h6><p>Third-party software integrations</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></div>
+        <div class="nav-item"><a href="projects.html" class="nav-link">Gallery</a></div>
+        <div class="nav-item"><a href="solutions.html" class="nav-link">Why us</a></div>
+        <div class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></div>
+      </div>
+
+      <div class="nav-right-actions">
+        <a href="contact.html" class="btn-black-pill">Book a demo</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero-banner">
+    <div class="container">
+      <span class="section-tag">PLANS & PRICING</span>
+      <h1>Choose the plan that fits your team</h1>
+      <p>Upgrade, downgrade, or talk to us for something custom - every plan runs on the same WhatsApp business platform.</p>
+      
+      <!-- Interactive Monthly / Annual Billing Toggle -->
+      <div class="billing-toggle-wrapper" style="margin-top:28px; display:inline-flex; align-items:center; background:#f1f5f9; padding:4px; border-radius:9999px; border:1px solid #e2e8f0;">
+        <button id="toggle-monthly" class="billing-toggle-btn active">Monthly</button>
+        <button id="toggle-annual" class="billing-toggle-btn">Annual <span style="background:#dcfce7; color:#15803d; font-size:0.72rem; padding:2px 8px; border-radius:9999px; font-weight:800; margin-left:4px;">−10%</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 Main Pricing Cards -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="pricing-grid-3">
+        
+        <!-- Basic Plan -->
+        <div class="pricing-card">
+          <div>
+            <h3 style="font-size:1.35rem; font-weight:800;">Basic Plan</h3>
+            <div style="font-size:2.2rem; font-weight:800; margin:12px 0 4px 0; color:var(--text-dark);">
+              <span class="price-val" data-monthly="₹4,050" data-annual="₹3,645">₹4,050</span><span style="font-size:1rem; color:var(--text-muted); font-weight:600;">/ month</span>
+              <span style="font-size:0.78rem; color:var(--text-muted); display:block; font-weight:600;">+ 18% GST</span>
+            </div>
+            <div class="billing-saving-note" style="font-size:0.8rem; color:#16a34a; font-weight:700; min-height:20px; margin-bottom:12px;"></div>
+            <p style="font-size:0.82rem; color:var(--text-muted); padding-bottom:16px; border-bottom:1px solid var(--border-subtle); margin-bottom:16px;">
+              Plan includes 1 user. Extra user: ₹999 per month.
+            </p>
+
+            <div style="font-size:0.85rem; font-weight:800; color:var(--text-dark); margin-bottom:10px;">WABA Subscription 1</div>
+            <ul class="pricing-feature-list">
+              <li><i class="fa-solid fa-check"></i> Team Inbox</li>
+              <li><i class="fa-solid fa-check"></i> Broadcasting Interface</li>
+              <li><i class="fa-solid fa-check"></i> Broadcast Analytics</li>
+              <li><i class="fa-solid fa-check"></i> Unlimited Tags, Groups</li>
+              <li><i class="fa-solid fa-check"></i> Meta Ads (Facebook, Instagram)</li>
+              <li><i class="fa-solid fa-check"></i> API Setup Assistance</li>
+              <li><i class="fa-solid fa-check"></i> Conversation Price as per Meta</li>
+              <li><i class="fa-solid fa-check"></i> Mobile and Web app</li>
+              <li><i class="fa-solid fa-check"></i> WhatsApp Templates</li>
+              <li><i class="fa-solid fa-check"></i> WhatsApp flows</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn-black-pill" style="width:100%; text-align:center; margin-top:24px;">Book a Demo</a>
+        </div>
+
+        <!-- Starter Plan (Most Popular) -->
+        <div class="pricing-card featured">
+          <div class="featured-badge">Most Popular</div>
+          <div>
+            <h3 style="font-size:1.35rem; font-weight:800;">Starter Plan</h3>
+            <div style="font-size:2.2rem; font-weight:800; margin:12px 0 4px 0; color:#2563eb;">
+              <span class="price-val" data-monthly="₹6,750" data-annual="₹6,075">₹6,750</span><span style="font-size:1rem; color:var(--text-muted); font-weight:600;">/ month</span>
+              <span style="font-size:0.78rem; color:var(--text-muted); display:block; font-weight:600;">+ 18% GST</span>
+            </div>
+            <div class="billing-saving-note" style="font-size:0.8rem; color:#16a34a; font-weight:700; min-height:20px; margin-bottom:12px;"></div>
+            <p style="font-size:0.82rem; color:var(--text-muted); padding-bottom:16px; border-bottom:1px solid var(--border-subtle); margin-bottom:16px;">
+              Plan includes 1 user. Extra user: ₹999 per month.
+            </p>
+
+            <div style="font-size:0.85rem; font-weight:800; color:var(--text-dark); margin-bottom:10px;">WABA Subscription 5</div>
+            <div style="font-size:0.8rem; font-weight:700; color:#2563eb; margin-bottom:8px;">All features in Basic, plus:</div>
+            <ul class="pricing-feature-list">
+              <li><i class="fa-solid fa-check"></i> WhatsApp flows – 20 flows <span style="background:#eff6ff; color:#2563eb; font-size:0.68rem; padding:2px 6px; border-radius:4px; font-weight:800;">New</span></li>
+              <li><i class="fa-solid fa-check"></i> WhatsApp Templates</li>
+              <li><i class="fa-solid fa-check"></i> Broadcast Scheduler</li>
+              <li><i class="fa-solid fa-check"></i> Facebook Lead form Integration</li>
+              <li><i class="fa-solid fa-check"></i> Conversation Assignment</li>
+              <li><i class="fa-solid fa-check"></i> Catalogs (for E-commerce)</li>
+              <li><i class="fa-solid fa-check"></i> Built-in Order Management</li>
+              <li><i class="fa-solid fa-check"></i> Order Updates & Shopify Order Updates</li>
+              <li><i class="fa-solid fa-check"></i> Razorpay Integration</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn-black-pill" style="width:100%; text-align:center; margin-top:24px;">Book a Demo</a>
+        </div>
+
+        <!-- Enterprise / Custom -->
+        <div class="pricing-card">
+          <div>
+            <h3 style="font-size:1.35rem; font-weight:800;">Enterprise / Custom</h3>
+            <div style="font-size:2rem; font-weight:800; margin:12px 0 4px 0; color:var(--text-dark);">
+              Let's talk
+            </div>
+            <p style="font-size:0.85rem; color:var(--text-muted); padding-bottom:16px; border-bottom:1px solid var(--border-subtle); margin-bottom:16px; min-height:50px;">
+              Custom users, pricing tailored to your team's scale.
+            </p>
+
+            <div style="font-size:0.85rem; font-weight:800; color:var(--text-dark); margin-bottom:10px;">WABA Subscription 20</div>
+            <div style="font-size:0.8rem; font-weight:700; color:#2563eb; margin-bottom:8px;">All features in Starter, plus:</div>
+            <ul class="pricing-feature-list">
+              <li><i class="fa-solid fa-check"></i> Advanced Chatbot Builder</li>
+              <li><i class="fa-solid fa-check"></i> Automate Followups and Reminders</li>
+              <li><i class="fa-solid fa-check"></i> 3rd Party Integrations</li>
+              <li><i class="fa-solid fa-check"></i> Unlimited Workflows</li>
+              <li><i class="fa-solid fa-check"></i> WhatsApp Flows</li>
+              <li><i class="fa-solid fa-check"></i> Gmail Automation via App Scripts</li>
+              <li><i class="fa-solid fa-check"></i> Developer API</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn-black-pill" style="width:100%; text-align:center; margin-top:24px;">Book a Call</a>
+        </div>
+
+      </div>
+
+      <!-- Meta Charges Note Banner -->
+      <div class="meta-charges-note" style="margin-top:40px; background:#f8fafc; border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:20px 24px; font-size:0.86rem; color:var(--text-muted); line-height:1.6;">
+        <strong style="color:var(--text-dark); display:block; margin-bottom:4px;"><i class="fa-solid fa-circle-info" style="color:#2563eb; margin-right:6px;"></i> A note on Meta's charges:</strong>
+        Meta charges separately for message delivery based on message type and country - we'll walk you through expected costs for your volume before you subscribe. Our service fee covers design, build, and management. Delivery costs go directly to Meta via your WABA.
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Comparison Table ("Everything side by side") -->
+  <section class="section-padding" style="background:#ffffff; border-top:1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Full Comparison</span>
+        <h2 class="section-title">Everything side by side</h2>
+        <p class="section-subtitle">Detailed feature breakdown across all Flowgen plans.</p>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th style="width:40%;">Feature</th>
+              <th style="width:20%;">Basic</th>
+              <th style="width:20%;">Starter</th>
+              <th style="width:20%;">Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>WhatsApp numbers</td>
+              <td>1</td>
+              <td>5</td>
+              <td>Multiple</td>
+            </tr>
+            <tr>
+              <td>Users included</td>
+              <td>1</td>
+              <td>1</td>
+              <td>Custom</td>
+            </tr>
+            <tr>
+              <td>Extra user cost</td>
+              <td>₹999/mo</td>
+              <td>₹999/mo</td>
+              <td>Custom</td>
+            </tr>
+            <tr>
+              <td>WhatsApp flows</td>
+              <td>2 flows</td>
+              <td>20 flows</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td>WhatsApp Templates</td>
+              <td class="cross-mark">—</td>
+              <td class="check-mark">✓</td>
+              <td class="check-mark">✓</td>
+            </tr>
+            <tr>
+              <td>Broadcasting</td>
+              <td class="check-mark">✓</td>
+              <td class="check-mark">✓</td>
+              <td class="check-mark">✓</td>
+            </tr>
+            <tr>
+              <td>Broadcast Scheduler</td>
+              <td class="cross-mark">—</td>
+              <td class="check-mark">✓</td>
+              <td class="check-mark">✓</td>
+            </tr>
+            <tr>
+              <td>WhatsApp AI Agents</td>
+              <td class="check-mark">✓</td>
+              <td class="check-mark">✓</td>
+              <td class="check-mark">✓</td>
+            </tr>
+            <tr>
+              <td>Team Inbox</td>
+              <td class="check-mark">✓</td>
+              <td class="check-mark">✓</td>
+              <td class="check-mark">✓</td>
+            </tr>
+            <tr>
+              <td>Conversation Assignment</td>
+              <td class="cross-mark">—</td>
+              <td class="check-mark">✓</td>
+              <td class="check-mark">✓</td>
+            </tr>
+            <tr>
+              <td>E-commerce Catalogs</td>
+              <td class="cross-mark">—</td>
+              <td class="check-mark">✓</td>
+              <td class="check-mark">✓</td>
+            </tr>
+            <tr>
+              <td>Shopify / Order Updates</td>
+              <td class="cross-mark">—</td>
+              <td class="check-mark">✓</td>
+              <td class="check-mark">✓</td>
+            </tr>
+            <tr>
+              <td>Razorpay / PayU Integration</td>
+              <td class="cross-mark">—</td>
+              <td class="check-mark">✓</td>
+              <td class="check-mark">✓</td>
+            </tr>
+            <tr>
+              <td>Unlimited Workflows</td>
+              <td class="cross-mark">—</td>
+              <td class="cross-mark">—</td>
+              <td class="check-mark">✓</td>
+            </tr>
+            <tr>
+              <td>Developer API</td>
+              <td class="cross-mark">—</td>
+              <td class="cross-mark">—</td>
+              <td class="check-mark">✓</td>
+            </tr>
+            <tr>
+              <td>3rd Party Integrations</td>
+              <td class="cross-mark">—</td>
+              <td class="cross-mark">—</td>
+              <td class="check-mark">✓</td>
+            </tr>
+            <tr>
+              <td>Dedicated Support</td>
+              <td>24–48 h</td>
+              <td>Priority</td>
+              <td>SLA-backed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Questions About Pricing Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="background:#ffffff; border:1px solid var(--border-subtle); border-radius:var(--radius-xl); padding:40px; text-align:center; box-shadow:var(--shadow-md); max-width:800px; margin:0 auto;">
+        <h2 style="font-size:1.8rem; font-weight:800; margin-bottom:10px;">Questions about pricing?</h2>
+        <p style="font-size:1rem; color:var(--text-muted); margin-bottom:24px;">
+          We answer the most common ones in our FAQ - or you can just message us directly.
+        </p>
+        <div style="display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap;">
+          <a href="faq.html" class="btn-white-pill" style="padding:12px 24px;">Read the FAQ</a>
+          <a href="contact.html" class="btn-black-pill" style="padding:12px 24px;">Talk to us <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <!-- Multi-Column Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & Description -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="logo" style="margin-bottom:14px; display:inline-flex;">
+            <svg class="logo-icon-svg" viewBox="0 0 40 40" fill="none">
+              <path d="M10 28 C10 16, 20 8, 28 12 C34 15, 34 25, 26 28 C20 30, 14 20, 20 12" stroke="url(#logo-grad-foot-gen)" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <defs>
+                <linearGradient id="logo-grad-foot-gen" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2563eb" />
+                  <stop offset="50%" stop-color="#0284c7" />
+                  <stop offset="100%" stop-color="#25d366" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <span style="color:#fff;">FLOWGEN</span>
+          </a>
+          <p class="footer-brand-desc">
+            Building premium digital experiences through websites, AI automation, WhatsApp automation, and custom software development.
+          </p>
+        </div>
+
+        <!-- Column 2: Services -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Business Websites</a></li>
+            <li><a href="services.html">AI Automation</a></li>
+            <li><a href="services.html">WhatsApp Automation</a></li>
+            <li><a href="services.html">Custom Software</a></li>
+            <li><a href="services.html">UI/UX Design</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Solutions -->
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="solutions.html">Restaurants</a></li>
+            <li><a href="solutions.html">Healthcare</a></li>
+            <li><a href="solutions.html">Retail</a></li>
+            <li><a href="solutions.html">Education</a></li>
+            <li><a href="solutions.html">Hospitality</a></li>
+            <li><a href="solutions.html">Real Estate</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Company -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="technologies.html">Technologies</a></li>
+            <li><a href="projects.html">Sample Projects</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 5: Legal -->
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Flowgen. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
