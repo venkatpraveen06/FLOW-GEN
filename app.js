@@ -57,11 +57,7 @@ function initServicesDropdown() {
       link.addEventListener('click', (e) => {
         if (window.innerWidth <= 1024) {
           e.preventDefault();
-          const isVisible = mega.style.display === 'block';
-          mega.style.display = isVisible ? 'none' : 'block';
-          mega.style.opacity = isVisible ? '0' : '1';
-          mega.style.pointerEvents = isVisible ? 'none' : 'auto';
-          mega.style.transform = isVisible ? 'translateX(-50%) translateY(14px) scale(0.98)' : 'translateX(-50%) translateY(6px) scale(1)';
+          mega.classList.toggle('mobile-open');
         }
       });
     }
@@ -70,33 +66,18 @@ function initServicesDropdown() {
 
 /* Header Scroll & Mobile Interactivity */
 function initHeader() {
-  const headerWrap = document.querySelector('.header-sticky-wrap');
   const mobileToggle = document.querySelector('.mobile-toggle');
   const navLinks = document.querySelector('.nav-links');
 
-  if (headerWrap) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 30) {
-        headerWrap.classList.add('scrolled');
-      } else {
-        headerWrap.classList.remove('scrolled');
-      }
-    });
-  }
-
   if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener('click', () => {
-      const isOpen = navLinks.style.display === 'flex';
-      navLinks.style.display = isOpen ? 'none' : 'flex';
-      if (!isOpen) {
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'absolute';
-        navLinks.style.top = '100%';
-        navLinks.style.left = '0';
-        navLinks.style.width = '100%';
-        navLinks.style.background = '#ffffff';
-        navLinks.style.padding = '20px';
-        navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navLinks.classList.toggle('active-mobile');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navLinks.classList.remove('active-mobile');
       }
     });
   }
