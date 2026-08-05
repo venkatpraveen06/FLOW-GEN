@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initPageTransitions();
-  initScrollReveal();
+  initWipedownAnimation();
   initHeader();
   initSlidingHeaderPill();
   initServicesDropdown();
@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
 });
 
-/* High-End Universal Scroll Reveal & Slide-Fade Animations */
-function initScrollReveal() {
+/* Smooth Slow Wipe-Down Animation System */
+function initWipedownAnimation() {
   const targetSelectors = [
     '.section-header',
     '.service-card',
@@ -35,7 +35,7 @@ function initScrollReveal() {
     '.phone-mockup-container',
     '.right-floating-card',
     '.footer-col',
-    '.reveal-on-scroll'
+    '.wipedown-reveal'
   ];
 
   const observer = new IntersectionObserver((entries) => {
@@ -51,8 +51,8 @@ function initScrollReveal() {
 
   const allTargets = document.querySelectorAll(targetSelectors.join(', '));
   allTargets.forEach((el) => {
-    if (!el.classList.contains('reveal-on-scroll')) {
-      el.classList.add('reveal-on-scroll');
+    if (!el.classList.contains('wipedown-reveal')) {
+      el.classList.add('wipedown-reveal');
     }
     
     const parentGrid = el.parentElement;
@@ -123,11 +123,13 @@ function initHeader() {
     mobileToggle.addEventListener('click', (e) => {
       e.stopPropagation();
       navLinks.classList.toggle('active-mobile');
+      mobileToggle.classList.toggle('is-active');
     });
 
     document.addEventListener('click', (e) => {
       if (!navLinks.contains(e.target) && !mobileToggle.contains(e.target)) {
         navLinks.classList.remove('active-mobile');
+        mobileToggle.classList.remove('is-active');
       }
     });
   }
