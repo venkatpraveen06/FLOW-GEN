@@ -18,25 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
 });
 
-/* Smooth Slow Wipe-Down Animation System */
+/* Strict One-By-One Sequential Chain Wipe-Down Animation System */
 function initWipedownAnimation() {
-  const targetSelectors = [
-    '.section-header',
-    '.service-card',
-    '.solution-card',
-    '.project-card',
-    '.pricing-card',
-    '.process-step-card',
-    '.faq-item',
-    '.contact-form-box',
-    '.hero-main-title',
-    '.hero-checkmarks-row',
-    '.hero-cta-buttons',
-    '.phone-mockup-container',
-    '.right-floating-card',
-    '.footer-col',
-    '.wipedown-reveal'
-  ];
+  const sections = document.querySelectorAll('section, footer, header');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -45,25 +29,18 @@ function initWipedownAnimation() {
       }
     });
   }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.08,
+    rootMargin: '0px 0px -30px 0px'
   });
 
-  const allTargets = document.querySelectorAll(targetSelectors.join(', '));
-  allTargets.forEach((el) => {
-    if (!el.classList.contains('wipedown-reveal')) {
-      el.classList.add('wipedown-reveal');
-    }
-    
-    const parentGrid = el.parentElement;
-    if (parentGrid && (parentGrid.classList.contains('services-grid') || parentGrid.classList.contains('solutions-grid') || parentGrid.classList.contains('projects-grid') || parentGrid.classList.contains('pricing-grid-3') || parentGrid.classList.contains('footer-grid'))) {
-      const index = Array.from(parentGrid.children).indexOf(el);
-      if (index >= 0) {
-        el.classList.add(`stagger-${(index % 5) + 1}`);
-      }
-    }
+  sections.forEach(section => {
+    const items = section.querySelectorAll('.section-tag, .section-title, .section-subtitle, .service-card, .solution-card, .project-card, .pricing-card, .process-step-card, .faq-item, .contact-form-box, .hero-main-title, .hero-checkmarks-row, .hero-cta-buttons, .phone-mockup-container, .right-floating-card, .footer-col');
 
-    observer.observe(el);
+    items.forEach((item, index) => {
+      item.classList.add('wipedown-reveal');
+      item.classList.add(`stagger-${(index % 6) + 1}`);
+      observer.observe(item);
+    });
   });
 }
 
